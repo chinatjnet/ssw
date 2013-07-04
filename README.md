@@ -15,3 +15,5 @@ ssw站长建站系统 V1.0
 演示用户名：admin  密码：sunsonworld
 
 下载地址：http://dl.dbank.com/c0unqaqq9e
+
+![github](https://raw.github.com/chinatjnet/ssw/master/introImg/1.png "intro1")
