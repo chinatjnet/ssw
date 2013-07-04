@@ -1,0 +1,115 @@
+{include file="site_head.html"}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel='alternate' type='application/rss+xml' title='RSS 2.0' href='http://blogger.blogbus.com/index.rdf' />
+<link href='{$temp_dir}/index11data/sDH21.css' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="{$temp_dir}/index11data/sDH23.css" type="text/css"  />
+<link rel="stylesheet" href="{$temp_dir}/index11data/sDH25.css" type="text/css"  />
+<meta name="google-site-verification" content="nZ5Tw6ncs7zKClZJT0wg6j8K76fc2jT6yrrI-PU9U34" /><meta name='description' content='每个博客，都有故事……' />
+</head><body>
+<div id="index">
+  <div id="container">
+
+<!--site_nav  start-->
+
+{include file="site_nav.html"}
+
+<!--site_nav  END-->
+
+<div id="eyecatchPic"><a href="http://blog.sunsonworld.com/" title="天骄天下"><img src="{$temp_dir}/index11data/sDH27.jpg" width="950" height="160" alt="" /></a></div>
+
+    <div id="innerContainer">
+      <div class="innerTop"></div>
+      <div id="outerContent">
+        <div id="content">
+          <div class="contentTop"></div>
+          <ul id="posts">
+  <div class="postsTop"></div>
+  
+  <li>
+    <div class="postHeader">
+      <h2><a>个人档案</a><span class='category'></span></h2>
+    </div>
+    <div class="postBody">
+	
+      <p>
+	  	  <img src="{$s_headpic_b}"/  style="float:left">
+	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人昵称：{$s_nickname}<br />
+	  　　性   别：{$s_sex}<br />
+	  　　出生日期：{$s_birthday}<br />
+	  　　出生城市：{$s_birthplace}<br />
+	  　　现居城市：{$s_nowplace}<br />
+	  　　情感状态：{$s_lovestate}<br>
+	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q   Q号：{$s_qq}<br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学    历：{$s_edu_bg}<br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公    司：{$s_company}
+
+	  </p>
+
+<p style="text-align:left;">
+个人说明：{$s_selfintro}<br>
+个性签名：{$s_uniqsign}
+
+
+</p>
+      <div class="clear"></div>
+    </div>
+    <div class="postFooter">
+
+    </div>
+  </li>
+  
+
+  
+  <div class="postsBottom"></div>
+</ul>
+
+          <div class="contentBottom"></div>
+        </div>
+      </div>
+      <div id="outerSidebar">
+        <div id="sidebar">
+          <div class="sideTop"></div>
+          <div id="search" class="module">
+	<div class="modTop"></div>
+	<h2>搜索</h2>
+	<div class="modBody">
+		<form name="SearchForm" method="get" target="_blank" action="http://search.blogbus.com/search">
+			<input type="text" name="q" class="textField" />
+			<input type="submit" class="button" value="搜索" />
+			<input type="hidden" name="b" value="2845"/>
+			<input type="hidden" name="dir" value="oneblog"/>
+			<div class="clear"></div>
+		</form>
+	</div>
+	<div class="modBottom"></div>
+</div>
+
+<div id="calendar" class="module">
+
+	<div class="modBottom"></div>
+</div><div id="nPosts" class="module">
+	<div class="modTop"></div>
+	<h2>最新日志</h2>
+	<div class="modBody">
+		<ul>
+		{$article_91_latest}
+         </ul>
+		<div class="more"><a href="index.php?display=article&upid=91&type=index">全部日志>></a></div>
+	</div>
+</div>
+
+
+<div id='custom2'></div>
+    <div id="meta" class="module">
+            <div class="modTop"></div>
+
+  {include file="site_rss.html"}
+      <div class="clear"></div>
+
+    </div>
+	<div class="clear"></div>
+<!--site_foot start-->
+
+{include file="site_foot.html"}
+
+<!--site_foot  END-->

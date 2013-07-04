@@ -1,0 +1,162 @@
+  <div  id="head">               <!--head  start-->
+    <img src="{$temp_dir}/images/logo.gif" width="40" height="62" alt="天骄天下"  id="logo"/><font  id="site_info">天骄天下个人网站系统 SSW_V 1.0</font>
+    <div id="user_info">
+        <span>欢迎您，<a href="index.php?display=safety">{$smarty.session.username}</a>|<a href="{$site_root}/index.php" target="_blank">查看首页</a>|<a href="{$admin_root}/login_out.php">安全退出</a></span>
+     </div>
+     <div id="fast_function">
+      <ul class="nav_now">
+           <li><a   class="nav_now_title" ><font  class="index.php?display=emotion"  onclick=" window.location.href=this.className;">发表心情</font><span  onclick="Get_iduse(0,0)"  id="use0"></span></a>
+            <p  id="class1content0"  class="class1content"   style="display:none;Z-index:100;">
+            <a href="index.php?display=article_add">发表日志</a>
+            <a href="index.php?display=lover">情侣空间</a>
+            <a href="index.php?display=visitor">最近访客</a>
+            <a href="index.php?display=class_manage">栏目管理</a>
+            <a href="index.php?display=safety">安全设置</a>
+            <a href="index.php?display=site_config">系统配置</a>
+
+            </p>
+          </li>
+       </ul>
+     </div>
+     <div id="help">
+     <a href="http://blog.sunsonworld.com">&nbsp;&nbsp;帮助</a>
+     </div>
+
+  </div>                         <!--head  end-->
+
+
+  <div  id="navbar">             <!--navbar  start-->
+
+  <!--user_center  start-->
+      <ul class="nav_now  {if $style_center=="1"||$smarty.get.type=="index_index"}{else}nav_title{/if} user_center">
+      <li><a    class="nav_now_title"><font  class="index.php"  title="个人中心" onclick="window.location.href=this.className;">个人中心</font><span  onclick="Get_iduse(-1,{if $style_center=="1"||$smarty.get.type=="index_index"}0{else}1{/if})"  id="use-1"></span></a>
+          <p  id="class1content-1"  class="class1content"   style="display:{if $style_center=="1"||$smarty.get.type=="index_index"}block{else}none{/if};">
+            <a href=""  class="{if $style_center=="1"}nav_now_link{else}{/if}">个人动态</a>
+
+		    <a href="index.php?display=label_set&type=index_index"  {if $get_type eq 'index' } {if $smarty.get.list_upid eq $nav_list[nav_list].fclassid   }class="nav_now_link"{/if}{/if}>
+		    <img src="{$temp_dir}/images/label_handle.gif" style="margin-bottom:-2px;">
+		    首页标签
+		    </a>
+            <a href="">信息档案</a>
+          </p>
+      </li>
+      </ul>
+  <!--user_center   end-->
+     <div class="separate_char"></div>
+  <!--====================user_menu start============================-->
+
+     <div class="separate_border"></div>
+
+  {section  name=nav_list  loop=$nav_list}
+
+      <ul  class="nav_now   {$nav_list[nav_list].nav_class}   user_{$nav_list[nav_list].fbelong_name}" >
+      <li><a    class="nav_now_title" >
+	         <font  class="index.php?display={$nav_list[nav_list].fbelong_name}&list_upid={$nav_list[nav_list].fclassid}"  title="{$nav_list[nav_list].fclassname}" style="width:56px;" onclick=" javascript:window.location.href=this.className;">{$nav_list[nav_list].subname}</font>
+	         <span  onclick="Get_iduse({$nav_list[nav_list].fclassid},{if $nav_list[nav_list].nav_class==""}0{else}1{/if})"  id="use{$nav_list[nav_list].fclassid}"></span>
+	      </a>
+		  <p  id="class1content{$nav_list[nav_list].fclassid}"  class="class1content"  {if $nav_list[nav_list].nav_class==""} style="display:block;"{else}style="display:none;"{/if}>
+		  {section  name=nav_child  loop=$nav_list[nav_list].nav_child}
+
+            <a href="index.php?display={if $nav_list[nav_list].fbelong_name=="album"}photo{else}{$nav_list[nav_list].fbelong_name}{/if}&list_upid={$nav_list[nav_list].fclassid}&list_classid={$nav_list[nav_list].nav_child[nav_child].cclassid}"  class="{$nav_list[nav_list].nav_child[nav_child].nav_now_link}">{$nav_list[nav_list].nav_child[nav_child].cclassname}</a>
+
+		  {/section}
+		  <a href="index.php?display=label_set&list_upid={$nav_list[nav_list].fclassid}&type={$nav_list[nav_list].fbelong_name}_index"  {if $get_type eq 'index' } {if $smarty.get.list_upid eq $nav_list[nav_list].fclassid }class="nav_now_link"{/if}{/if}>
+		  <img src="{$temp_dir}/images/label_handle.gif" style="margin-bottom:-2px;">
+		  目录页
+		  </a>
+
+		  <a href="index.php?display=label_set&list_upid={$nav_list[nav_list].fclassid}&type={$nav_list[nav_list].fbelong_name}_list"  {if $get_type eq 'list' } {if $smarty.get.list_upid eq $nav_list[nav_list].fclassid }class="nav_now_link"{/if}{/if}>
+		  <img src="{$temp_dir}/images/label_handle.gif" style="margin-bottom:-2px;">
+		  列表页
+		  </a>
+          {if $nav_list[nav_list].fbelong_name eq "article"}
+		  <a href="index.php?display=label_set&list_upid={$nav_list[nav_list].fclassid}&type={$nav_list[nav_list].fbelong_name}_view"  {if $get_type eq 'view' } {if $smarty.get.list_upid eq $nav_list[nav_list].fclassid   }class="nav_now_link"{/if}{/if}>
+		  <img src="{$temp_dir}/images/label_handle.gif" style="margin-bottom:-2px;">
+		  阅读页
+		  </a>
+		  {/if}
+          </p>
+      </li>
+      </ul>
+
+   {/section}
+
+     <div class="separate_border"></div>
+
+  <!--============================user_menu end========================-->
+  <div class="separate_char"></div>
+
+
+  <!--=====================default_menu start=====================-->
+      <ul class="nav_now  {if $style_visitor=="1"}{else}nav_title{/if}  user_visitor" >
+      <li><a     class="nav_now_title" ><font  class="index.php?display=visitor" title="最近访客" onclick=" window.location.href=this.className;">最近访客</font><span  onclick="Get_iduse(42,{if $style_visitor=="1"}0{else}1{/if})"  id="use42"></span></a>
+          <p  id="class1content42"  class="class1content"   style="display:{if $style_visitor=="1"}block{else}none{/if};">
+            <a href="index.php?display=visitor">最近访客</a>
+          </p>
+      </li>
+      </ul>
+
+
+      <ul class="nav_now  {if $style_friend=="1"}{else}nav_title{/if}  user_friend" >
+      <li><a     class="nav_now_title" ><font  class="index.php?display=friend" title="好友管理" onclick=" window.location.href=this.className;">好友管理</font><span  onclick="Get_iduse(43,{if $style_friend=="1"}0{else}1{/if})"  id="use43"></span></a>
+          <p  id="class1content43"  class="class1content"   style="display:{if $style_friend=="1"}block{else}none{/if};">
+            <a href="index.php?display=friend">好友管理</a>
+			<a href="index.php?display=friend_action">好友动态</a>
+          </p>
+      </li>
+      </ul>
+
+      <ul class="nav_now  {if $style_head_info=="1"}{else}nav_title{/if}  user_friend" >
+      <li><a     class="nav_now_title" ><font  class="index.php?display=head_info" title="好友管理" onclick=" window.location.href=this.className;">头像管理</font><span  onclick="Get_iduse(44,{if $style_head_info=="1"}0{else}1{/if})"  id="use44"></span></a>
+          <p  id="class1content44"  class="class1content"   style="display:{if $style_head_info=="1"}block{else}none{/if};">
+            <a href="index.php?display=head_info">头像设置</a>
+          </p>
+      </li>
+      </ul>
+  <!--====================default_menu end========================-->
+
+  <div class="separate_char"></div>
+  <!--================tool_menu start====================================-->
+      <ul class="nav_now  {if $style_class_manage=="1"}{else}nav_title{/if}  user_class">
+      <li><a     class="nav_now_title" ><font  class="index.php?display=class_manage" title="栏目管理" onclick=" window.location.href=this.className;">栏目管理</font><span  onclick="Get_iduse(60,{if $style_class_manage=="1"}0{else}1{/if})"  id="use60"></span></a>
+          <p  id="class1content60"  class="class1content"   style="display:{if $style_class_manage=="1"}block{else}none{/if};">
+            <a href="index.php?display=class_manage" {if $smarty.get.display =='class_manage'}class="nav_now_link"{/if}>栏目设置</a>
+          </p>
+      </li>
+      </ul>
+
+      <ul class="nav_now  {if $style_file=="1"}{else}nav_title{/if}  user_file">
+      <li><a    class="nav_now_title" ><font  class="index.php?display=file" title="文件管理" onclick="alert('温馨提示：公测阶段，此功能暂不对外开放，请关注后续更新版本！')">文件管理</font><span  onclick="Get_iduse(61,{if $style_file=="1"}0{else}1{/if})"  id="use61"></span></a>
+          <p  id="class1content61"  class="class1content"   style="display:{if $style_file=="1"}block{else}none{/if};">
+            <a href="javascript:void(0)">文件管理</a>
+          </p>
+      </li>
+      </ul>
+
+      <ul class="nav_now  {if $style_safety=="1"}{else}nav_title{/if}  user_safe">
+      <li><a     class="nav_now_title" ><font class="index.php?display=safety" title="安全设置" onclick=" window.location.href=this.className;">安全设置</font><span  onclick="Get_iduse(62,{if $style_safety=="1"}0{else}1{/if})"  id="use62"></span></a>
+          <p  id="class1content62"  class="class1content"   style="display:{if $style_safety=="1"}block{else}none{/if};">
+            <a href="index.php?display=safety" {if $smarty.get.display =='safety'}class="nav_now_link"{/if}>安全设置</a>
+          </p>
+      </li>
+      </ul>
+
+      <ul class="nav_now  {if $style_site_config=="1"}{else}nav_title{/if}  user_system ">
+      <li><a     class="nav_now_title" ><font  class="index.php?display=site_config" title="系统配置" onclick=" window.location.href=this.className;">系统配置</font><span  onclick="Get_iduse(63,{if $style_site_config=="1"}0{else}1{/if})"  id="use63"></span></a>
+          <p  id="class1content63"  class="class1content"   style="display:{if $style_site_config=="1"}block{else}none{/if};">
+            <a href="index.php?display=site_config"  {if $smarty.get.display =='site_config'}class="nav_now_link"{/if}>基本配置</a>
+			<a href="index.php?display=theme">模板选择</a>
+			<a href="index.php?display=mail">邮件配置</a>
+          </p>
+      </li>
+      </ul>
+
+      <ul class="nav_now  nav_title  ie6_bug_ul"  >
+        <li</li>
+      </ul>
+
+      <div    class="copyright"><div>技术支持：<a href="http://blog.sunsonworld.com">天之骄子</a><br>版权所有：<a href="http://www.sunsonworld.com">天骄天下</a></div></div>
+ <!--tool_menu end-->
+
+
+  </div>                         <!--navbar  end-->

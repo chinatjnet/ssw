@@ -1,0 +1,65 @@
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '0', '175', '200712180324531293', 'upload/photos/1304090920500.jpg', '0','0', '0', '1304119720', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:28:40
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '0', '175', '0_22314240331393909_1', 'upload/photos/1304090920841.jpg', '0','0', '0', '1304119721', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:28:40
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '0', '175', '14_124022_20070913', 'upload/photos/1304090920269.gif', '0','0', '0', '1304119722', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:28:40
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '0', '175', '86f884d0fa638a129b5027fd', 'upload/photos/1304090920104.jpg', '0','0', '0', '1304119723', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:28:40
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '0', '175', '356_45589', 'upload/photos/1304090920962.jpg', '0','0', '0', '1304119724', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:28:40
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '0', '175', '20090409234617209', 'upload/photos/1304090920426.jpg', '0','0', '0', '1304119725', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:28:40
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '181', '175', 'php100-59[20110204-1754410]', 'upload/photos/1304091033368.JPG', '0','0', '0', '1304119833', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:30:34
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '181', '175', 'Z2', 'upload/photos/1304091034174.gif', '0','0', '0', '1304119835', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:30:34
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '181', '175', 'php100-59[20110204-1754410]', 'upload/photos/1304091177858.JPG', '0','0', '0', '1304119977', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:32:57
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`， `origin`, `dateline`, `user`) VALUES (NULL, '181', '175', 'Z2', 'upload/photos/1304091177359.gif', '0','0', '0', '1304119978', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:32:57
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`，`origin`, `dateline`,`user`) VALUES (NULL, '178', '175','未命名', 'upload/photos/1304091649407.jpg','0','0', '0', '1304120449', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:40:49
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`，`origin`, `dateline`,`user`) VALUES (NULL, '178', '175','gd2_ttfCACLH4FV', 'upload/photos/1304091818297.jpg','0','0', '0', '1304120618', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:43:38
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."photos` (`pid`, `classid`, `upid`, `title`, `path`, `c_num`,`cover`，`origin`, `dateline`,`user`) VALUES (NULL, '0', '175','图片1', 'upload/photos/1304092085733.jpg','0',0, '0', '1304120885', '0')
+客户IP:127.0.0.1
+时间 :2011-04-29 15:48:05
+

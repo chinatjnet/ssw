@@ -1,0 +1,137 @@
+{include file="site_head.html"}
+
+<!--site_head  *top and title END-->
+
+<link href="{$temp_dir}/css/common.css" rel="stylesheet" type="text/css" />
+<link href="{$temp_dir}/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$temp_dir}/js/common.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/easy.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/main.js"></script>
+<script charset="utf-8" src="{$admin_root}/function/editor/kindeditor.js"></script>
+</head>
+
+{literal}
+		<script>
+			KE.show({
+				id : 'textarea_guestbook',
+				newlineTag :'br',
+				resizeMode : 0,
+				allowPreviewEmoticons : false,
+				allowUpload : false,
+				items : [
+				'fontname', 'fontsize', '|', 'textcolor', 'bgcolor', 'bold', 'italic', 'underline',
+				'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+				'insertunorderedlist', '|', 'emoticons', 'image', 'link'],
+                 afterSetData : function(id) {
+					 left_str=250- KE.count(id, 'text');
+					 if( left_str>=0){
+					  KE.$('tips').innerHTML ='你还可以输入<b>'+left_str+'</b>个字符';
+					  }else{
+				      KE.$('tips').innerHTML ='<font color="#FD6645">你已超过输入<b>'+Math.abs(left_str)+'</b>个字符</font>';
+
+						  }
+				}
+
+			});
+		</script>
+
+{/literal}
+
+<body>
+<div id="all">                                                      <!--webpage  start-->
+
+<!--site_nav  start-->
+
+{include file="site_nav.html"}
+
+<!--site_nav  END-->
+
+
+  <div  id="main">               <!--main  start-->
+
+        <div  id="main_head"> <!--main_head  start-->
+           <img src="{$temp_dir}/images/guestbook_center.png" width="31" height="34"   class="control_logo"/>
+           <h1>访客留言</h1>
+           <div id="news">
+                   <img src="{$temp_dir}/images/news.gif" width="20" height="24" /><font>飞鸽消息：</font>
+                   <div  id="news_list">
+                      <script type="text/javascript" src="{$temp_dir}/js/news.js"></script>
+                   </div>
+           <div class="clear"></div>
+           </div>
+        </div>
+        <div  id="main_content">    <!--main_left start-->
+
+       <div  class="content_block   guest_book">
+               <div  class="content_block_title">访客留言</div>
+               <div  class="content_block_main">
+                 <span><b>主人寄语：</b> 成熟的人生才更有活着的价值，每个人都是这世上不可缺少的一部分，珍惜生命，珍惜自己！</span>
+                 <div  class="sep_border"></div>
+                 <form action="index.php?display=guestbook" method="post" name="word_publish">
+                   <INPUT TYPE=hidden   NAME=display  VALUE="guestbook">
+                   <INPUT TYPE=hidden   NAME=do  VALUE="add">
+                   <textarea  id="textarea_guestbook"  name="message"></textarea>
+                   <span  class="guest_limit">
+                      <input type="submit" name="article_save"   class="article_act" style="margin-top:-5px;" value="发表留言"/>
+                      <input name="to_uniqsign" type="checkbox" value="fff" />
+                      <label>同步到个性签名</label> <div  id="tips"></div>
+                   </span>
+                 </form>
+
+         </div>
+           <div class="clear"></div>
+           </div>
+
+
+
+           <div  class="content_block   latest_act">
+
+               <div  class="content_block_main    guestbook_list">
+
+                  <ul>
+
+                      {section  name=guestbook_list  loop=$guestbook_list}
+
+                       <li>
+
+                       <a href="#"  class="friend_head_pic"><img src="{$temp_dir}/images/act_img.jpg" width="48" height="48" /></a>
+                       <span  class="act_emotion"><a href="">{$guestbook_list[guestbook_list].nickname}&nbsp;&nbsp;</a>给我留言&nbsp;&nbsp;&nbsp;&nbsp;{$guestbook_list[guestbook_list].time}</span>
+                       <div  class="act_content">
+                          <p>{$guestbook_list[guestbook_list].message}</p>
+                          <div  class="ip_edit"  style="background:none; color:#B7B7B7">
+                              <font>from   {$guestbook_list[guestbook_list].origin}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP:{$guestbook_list[guestbook_list].ip}</font>
+                              <a href="http://easyframework.com"   class="emotion_comment_link   popup"   rel="width:800;height:300">回复<b>({$guestbook_list[guestbook_list].c_num})</b></a>
+                              <a href="javascript:void(0);" onclick="CheckForm(this);location.href='index.php?display=guestbook&do=del&do_id={$guestbook_list[guestbook_list].guestid}&back_page={$back_page}'" >删除</a>
+                        </div>
+                        </div>
+
+                        <div  class="sep_border"></div>
+
+                       </li>
+
+                      {/section}
+
+
+                  </ul>
+
+               <div class="page"><div class="sabrosus">{$pagenav}</div></div>
+               <div class="clear"></div>
+               </div>
+
+
+
+
+           <div class="clear"></div>
+           </div>
+
+
+        </div> <!--main_left  end-->
+
+  </div>                          <!--main  end-->
+
+<!--site_foot start-->
+
+{include file="site_foot.html"}
+
+<!--site_foot  END-->

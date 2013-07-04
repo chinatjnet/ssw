@@ -1,0 +1,5 @@
+错误SQL语句：
+SELECT classname FROM `".DB_PRE."class` WHERE classid=  LIMIT 1
+客户IP:127.0.0.1
+时间 :2011-05-24 12:05:12
+

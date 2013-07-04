@@ -1,0 +1,10 @@
+错误SQL语句：
+SELECT * FROM `".DB_PRE."class`  WHERE  user=  AND  upid=0  ORDER BY  c_order
+客户IP:127.0.0.1
+时间 :2011-03-26 09:48:05
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."class`  WHERE  user=  AND  upid=0  ORDER BY  c_order
+客户IP:127.0.0.1
+时间 :2011-03-26 09:48:15
+

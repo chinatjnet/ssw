@@ -1,0 +1,16 @@
+#picobox {font-family:Tahoma,Verdana,Arial,Helvetica,"宋体",sans-serif;}
+#picobox td {font-size:1px;line-height:1px;padding:0;}
+#picobox .top { background:url(sDH104.png) repeat-x 0 0;height:7px;_background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.blogbus.com/user/imgs/picobox/picobox_beauty/sDH104.png");}
+#picobox .right { background:url(sDH105.png) repeat-y 0 0; width:9px; _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.blogbus.com/user/imgs/picobox/picobox_beauty/sDH105.png");}
+#picobox .bottom { background:url(sDH106.png) repeat-x 0 0;height:9px; _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.blogbus.com/user/imgs/picobox/picobox_beauty/sDH106.png");}
+#picobox .left { background:url(sDH107.png) repeat-y 0 0; width:7px; _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.blogbus.com/user/imgs/picobox/picobox_beauty/sDH107.png");}
+#picobox .rc_lt { width:7px; height:7px; background:url(sDH108.png) no-repeat 0 0; _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.blogbus.com/user/imgs/picobox/picobox_beauty/sDH108.png"); }
+#picobox .rc_rt { width:9px; height:7px; background:url(sDH109.png) no-repeat 0 0; _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.blogbus.com/user/imgs/picobox/picobox_beauty/sDH109.png");}
+#picobox .rc_lb { width:7px; height:9px; background:url(sDH110.png) no-repeat 0 0; _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.blogbus.com/user/imgs/picobox/picobox_beauty/sDH110.png");}
+#picobox .rc_rb { width:9px; height:9px; background:url(sDH111.png) no-repeat 0 0; _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://www.blogbus.com/user/imgs/picobox/picobox_beauty/sDH111.png");}
+#picobox td.content { background:#fff; vertical-align:top; text-align:left;font-size:12px;line-height:2em;}
+#picobox #picoboxInner td {font-size:12px;line-height:2em;}
+#picobox {border:none;background:none;}
+#picoboxInner h1.picoboxTitle { background:url(sDH112.gif) no-repeat 0 0; position:relative; padding:0 0 0 12px;}
+#picoboxInner h1.picoboxTitle div { background:url(sDH112.gif) no-repeat right 0; height:21px; line-height:21px; color:#fff; overflow:hidden; }
+#picoboxInner h1.picoboxTitle a.close { position:absolute; right:6px; top:0px; line-height:1em; font-size:13px; color:#fff; padding:3px; height:auto; width:auto; text-decoration:none; }

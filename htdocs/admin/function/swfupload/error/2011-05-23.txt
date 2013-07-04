@@ -1,0 +1,25 @@
+错误SQL语句：
+SELECT classname FROM `".DB_PRE."class` WHERE classid=
+客户IP:127.0.0.1
+时间 :2011-05-23 04:58:58
+
+错误SQL语句：
+SELECT classname FROM `".DB_PRE."class` WHERE classid=
+客户IP:127.0.0.1
+时间 :2011-05-23 04:58:58
+
+错误SQL语句：
+SELECT classname FROM `".DB_PRE."class` WHERE classid=
+客户IP:127.0.0.1
+时间 :2011-05-23 05:00:11
+
+错误SQL语句：
+SELECT classname FROM `".DB_PRE."class` WHERE classid=  LIMIT 1
+客户IP:127.0.0.1
+时间 :2011-05-23 05:00:30
+
+错误SQL语句：
+SELECT classname FROM `".DB_PRE."class` WHERE classid=  LIMIT 1
+客户IP:127.0.0.1
+时间 :2011-05-23 05:00:58
+

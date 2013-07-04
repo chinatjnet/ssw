@@ -1,0 +1,146 @@
+{include file="site_head.html"}
+
+<!--site_head  *top and title END-->
+
+<link href="{$temp_dir}/css/common.css" rel="stylesheet" type="text/css" />
+<link href="{$temp_dir}/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$temp_dir}/js/common.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/easy.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/main.js"></script>
+<script charset="utf-8" src="{$temp_dir}/editor/kindeditor.js"></script>
+
+</head>
+
+
+
+<body>
+<div id="all">                                                      <!--webpage  start-->
+
+<!--site_nav  start-->
+
+{include file="site_nav.html"}
+
+<!--site_nav  END-->
+
+  <div  id="main">               <!--main  start-->
+
+        <div  id="main_head"> <!--main_head  start-->
+           <img src="{$temp_dir}/images/collect_center.png" width="31" height="34"   class="control_logo"/>
+           <h1>网址收藏</h1>
+           <div id="news">
+                   <img src="{$temp_dir}/images/news.gif" width="20" height="24" /><font>飞鸽消息：</font>
+                   <div  id="news_list">
+                      <script type="text/javascript" src="{$temp_dir}/js/news.js"></script>
+                   </div>
+           <div class="clear"></div>
+           </div>
+        </div>
+        <div  id="main_content">    <!--main_left start-->
+
+       <div  class="content_block   main_tool   resource_main_tool">
+               <div  class="content_block_title">收藏列表</div>
+               <div  class="content_block_main">
+                        <span  class="tool_info"><img src="{$temp_dir}/images/user_resource.gif" width="16" height="17" /><b>全部收藏</b>{$collect_num}个
+                        </span>
+                        <span  class="tool_bar">
+                             <form action="" method="get">
+                                   <input name="input" type="checkbox" value=""   onclick="select_all(this.checked);"/>全选
+                                   <label>
+                                     <input type="button" name="shield" id="add"  onclick="javascript:window.location.href='index.php?display=collect_add&list_upid={$list_upid}'"  value="   添加网址"/>
+                                     <input type="button" name="del" id="del"  value="  删除所选"/   onclick="CheckForm(this);Get_id('batch_do').value='batch_del';document.collect_list_handle.submit();">
+                                     <select name="jumpMenu2" id="top_jump" onchange="if(this.selectedIndex>0)Get_id('batch_do').value='batch_show';Get_id('batch_show').value=this.options[this.selectedIndex].value;document.collect_list_handle.submit();">
+                                         <option value="" selected="selected" >隐私设置</option>
+                                        <option value="3">所有可见</option>
+                                        <option value="2">好友可见</option>
+                                        <option value="1">情侣可见</option>
+                                        <option value="0">主人可见</option>
+                                     </select>
+                                   </label>
+                             </form>
+                        </span>
+                        <div  class="sep_border"></div>
+
+                        <span  class="tool_clsss"   id="class_list_bar">
+
+                        <a href="index.php?display=collect&list_upid={$list_upid}"  style="{$class_all}">全部收藏</a><h4>|</h4>
+
+                        {section  name=cclass_list  loop=$cclass_list}
+
+                        <a href="index.php?display=collect&list_upid={$list_upid}&list_classid={$cclass_list[cclass_list].cclass_id}"    {$cclass_list[cclass_list].cclass_list_class}>{$cclass_list[cclass_list].cclass_name}</a><h4>|</h4>
+
+                        {/section}
+
+
+                        </span>
+
+                        <div  class="sep_border"></div>
+
+             </div>
+           <div class="clear"></div>
+           </div>
+
+
+
+           <div  class="content_block   latest_act   resource_list   collect_list"     id="list_check">
+
+               <div  class="content_block_main">
+                  <form action="index.php?display=collect" method="get"  name="collect_list_handle">
+
+                  <input name="display" type="hidden"  value="collect" />
+                  <input name="location_url" type="hidden"  value="{$location_url}" />
+                  <input name="do" type="hidden"   id="batch_do" value="batch_del" />
+                  <input name="batch_show_type" type="hidden"   id="batch_show" value="0" />
+
+                  <ul>
+
+                      {section  name=collect_list  loop=$collect_list}
+
+                       <li>
+                       <input name="collect_handle[]" type="checkbox"   class="visitor_list_check" value="{$collect_list[collect_list].collect_id}" />
+                       <span  class="act_emotion">
+                            <a href="{$collect_list[collect_list].url}"  target="_blank"  style="width:120px;"><b>{$collect_list[collect_list].name}</b></a>
+                            <font><a  href="{$collect_list[collect_list].url}"  target="_blank"  title="{$collect_list[collect_list].url_show}" style="width:180px;">{$collect_list[collect_list].url_show}</a></font>
+                            <a  href="index.php?display=collect&list_upid={$collect_list[collect_list].upid}&list_classid={$collect_list[collect_list].classid}"  class="collect_class"  style="width:100px;">{$collect_list[collect_list].result_classname}</a>
+                            <a  class="collect_class"  style="width:60px;">{$collect_list[collect_list].target|upper}</a>
+                            <a  href="index.php?display=collect_add&list_upid={$list_upid}&re_do=edit&do_id={$collect_list[collect_list].collect_id}&location_url={$location_url}">&nbsp;&nbsp;编辑&nbsp;&nbsp;</a>
+                            <a  href="javascript:void(0)" onclick="CheckForm();location.href='index.php?{$send_url}&do=del&do_id={$collect_list[collect_list].collect_id}'">&nbsp;&nbsp;删除&nbsp;&nbsp;</a>
+                            <select name="change_show" class="jumpMenu"  onchange="if(this.selectedIndex>=0)location.href=this.options[this.selectedIndex].value">
+					           <option value="index.php?display=collect&do=chg_show&do_id={$collect_list[collect_list].collect_id}&show=3&location_url={$location_url}"  {$collect_list[collect_list].array_show_3}>所有可见</option>
+                               <option value="index.php?display=collect&do=chg_show&do_id={$collect_list[collect_list].collect_id}&show=2&location_url={$location_url}"  {$collect_list[collect_list].array_show_2}>好友可见</option>
+                               <option value="index.php?display=collect&do=chg_show&do_id={$collect_list[collect_list].collect_id}&show=1&location_url={$location_url}"  {$collect_list[collect_list].array_show_1}>情侣可见</option>
+                               <option value="index.php?display=collect&do=chg_show&do_id={$collect_list[collect_list].collect_id}&show=0&location_url={$location_url}"  {$collect_list[collect_list].array_show_0}>主人可见</option>";
+
+                            </select>
+                       </span>
+
+                       <div  class="sep_border"></div>
+
+                       </li>
+
+                      {/section}
+
+
+
+                  </ul>
+               </form>
+               <div class="page"><div class="sabrosus">{$pagenav}</div></div>
+               <div class="clear"></div>
+               </div>
+
+
+
+
+           <div class="clear"></div>
+           </div>
+
+
+        </div> <!--main_left  end-->
+
+  </div>                          <!--main  end-->
+
+<!--site_foot start-->
+
+{include file="site_foot.html"}
+
+<!--site_foot  END-->

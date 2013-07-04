@@ -1,0 +1,126 @@
+﻿{include file="site_head.html"}
+
+<!--site_head  *top and title END-->
+
+<link href="{$temp_dir}/css/common.css" rel="stylesheet" type="text/css" />
+<link href="{$temp_dir}/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$temp_dir}/js/common.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/easy.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/main.js"></script>
+</head>
+
+{literal}
+<script>
+
+window.onload = function (){
+
+	 img_box();
+	 str_limit();
+
+	}
+
+
+</script>
+
+{/literal}
+
+<body>
+<div id="all">                                                      <!--webpage  start-->
+
+<!--site_nav  start-->
+
+{include file="site_nav.html"}
+
+<!--site_nav  END-->
+
+
+
+  <div  id="main">               <!--main  start-->
+
+        <div  id="main_head"> <!--main_head  start-->
+           <img src="{$temp_dir}/images/emotion_center.png" width="31" height="34"   class="control_logo"/>
+           <h1>心情微博</h1>
+           <div id="news">
+                   <img src="{$temp_dir}/images/news.gif" width="20" height="24" /><font>飞鸽消息：</font>
+                   <div  id="news_list">
+                      <script type="text/javascript" src="{$temp_dir}/js/news.js"></script>
+                   </div>
+           <div class="clear"></div>
+           </div>
+        </div>
+        <div  id="main_content">    <!--main_left start-->
+
+           <div  class="content_block   emotion_publish">
+               <div  class="content_block_title">心情微博</div>
+               <div  class="content_block_main">
+                 <form action="index.php?display=emotion" method="post"  name="emotion_add_form">
+
+                   <INPUT TYPE=hidden   NAME=display  VALUE="emotion">
+                   <INPUT TYPE=hidden   NAME=do  VALUE="emotion_add">
+
+                   <textarea name=message   maxlength="250"   id="textarea_emoution"  class="emotion_input"   onclick="textarea_in()"  onblur="textarea_out()">说说你今天的心情吧。。。。</textarea>
+                   <input type=image height=60 width=60  src="{$temp_dir}/images/publish.gif"/>
+
+                  <span> <input name="to_uniqsign" type="checkbox" value="1" /><label>同步到个性签名</label> <p  id="tips"></p> </span>
+                  <div  id="emotion_img_box"  style="display:none;" >
+                  </div>
+                 </form>
+
+               </div>
+           <div class="clear"></div>
+           </div>
+
+
+
+           <div  class="content_block   latest_act">
+
+               <div  class="content_block_main">
+                  <ul>
+
+
+
+                   {section  name=emotion_list  loop=$emotion_list}
+
+                       <li>
+
+                       <a href="#"  class="friend_head_pic"><img src="{$head_pic}" width="48" height="48" /></a>
+                       <span  class="act_emotion"><a href=""> {$nickname} </a>发表了新心情微博&nbsp;&nbsp;&nbsp;&nbsp;{$emotion_list[emotion_list].time}</span>
+                       <div  class="act_content">
+                          <p>{$emotion_list[emotion_list].message}</p>
+                          <div  class="ip_edit"  style="background:none; color:#B7B7B7">
+                              <font>from  {$emotion_list[emotion_list].origin}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP:{$emotion_list[emotion_list].ip}</font>
+                              <a href="index.php?display=emotion_comment&do_id={$emotion_list[emotion_list].eid}"   class="emotion_comment_link   popup"   rel="width:800;height:300">评论<b>({$emotion_list[emotion_list].c_num})</b></a>
+                              <a  href="javascript:void(0);" onclick="CheckForm(this);location.href='index.php?display=emotion&do=del&do_id={$emotion_list[emotion_list].eid}&back_page={$back_page}'">删除</a>
+                        </div>
+                        </div>
+
+                        <div  class="sep_border"></div>
+
+                       </li>
+
+                   {/section}
+
+
+                  </ul>
+
+               <div class="page"><div class="sabrosus">{$pagenav}</div></div>
+               <div class="clear"></div>
+               </div>
+
+
+
+
+           <div class="clear"></div>
+           </div>
+
+
+        </div> <!--main_left  end-->
+
+  </div>                          <!--main  end-->
+
+<!--site_foot start-->
+
+{include file="site_foot.html"}
+
+<!--site_foot  END-->

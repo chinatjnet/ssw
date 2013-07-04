@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+* { margin:0; padding:0; }
+img { border:0; }
+ul, ol { list-style:none; }
+a { color:#81a514; text-decoration:none; }
+a:hover { color:#f93; }
+.clear { clear:both; }
+.utilityMenu { color:#999; line-height:normal; }
+.utilityMenu a { margin:0 4px; color:#999; }
+.utilityMenu a:hover { color:#f93; }
+.module { background:url(sDH54.png) repeat-y 100% 100%; overflow:hidden; }
+
+body { font:12px/1.6 Tahoma, Arial, sans-serif; color:#666; text-align:center; background:#fff url(sDH55.png) repeat-x 0 0; }
+#index, #detail { margin:0 auto; width:950px; overflow:hidden; text-align:left; }
+/* HEADER */
+#header { position:relative; height:90px; overflow:hidden; }
+#header h1 { position:absolute; left:16px; top:16px; width:146px; height:45px; overflow:hidden; background:url(sDH56.png) no-repeat 0 0; text-indent:-9999px; line-height:normal; }
+#header h1 a { display:block; width:146px; height:45px; overflow:hidden; }
+#header h2 { display:none; }
+#header .utilityMenu { margin:14px 16px 13px; text-align:right; }
+#header .globalNavi { font-size:14px; font-weight:bold; text-align:center; }
+#header .globalNavi ul { float:right; }
+#header .globalNavi li { float:left; margin:0; width:72px; height:40px; overflow:hidden; }
+#header .globalNavi li a { float:left; display:block; width:72px; height:40px; overflow:hidden; line-height:40px; color:#666; }
+#header .globalNavi li a:hover, #header .globalNavi li.actived { background:url(sDH57.png) no-repeat 0 0; color:#fff; }
+#header .globalNavi li.actived a { color:#fff; }
+#header .globalNavi li.actived a:hover { background:none; }
+
+/* EYE CATCH PICT */
+#eyecatchPic { margin-bottom:16px; width:950px; height:160px; overflow:hidden; margin-top:5px; }
+#eyecatchPic img { width:950px; height:160px; overflow:hidden; }
+
+/* CONTENT */
+#content { float:left; width:670px; overflow:hidden; }
+#content #posts { position:relative; /*padding:14px 12px 4px;*/ background:url(sDH58.png) repeat-y -670px 0; }
+#content #posts li { border-bottom:16px solid #fff; }
+#content #posts .postHeader { position:relative; padding:14px 20px 0; background:url(sDH58.png) no-repeat 0 0; }
+#content #posts h2 { margin-bottom:16px; padding:0 0 8px 16px; background:url(sDH59.png) no-repeat 2px 4px; border-bottom:1px solid #cecece; font-family:Verdana, Geneva, sans-serif; font-size:18px; color:#666; }
+#content #posts h2 a { text-decoration:none; color:#666; }
+#content #posts h2 a:hover { color:#f93; }
+#content #posts h2 .category { position:relative; top:-1px; font-weight:normal; font-size:12px; color:#666; }
+#content #posts h3 { position:absolute; right:22px; top:20px; font-size:12px; font-weight:normal; color:#999; }
+#content #posts .relpost h3  { font-size:14px; font-weight:bold; position:static; margin-bottom:10px; }
+
+#content #posts .postBody { padding:0 20px; color:#333; line-height:1.9; }
+#content #posts .postBody p { margin-bottom:1em; }
+#content #posts .postFooter { padding:26px 20px 14px; background:url(sDH58.png) no-repeat 100% 100%; line-height:1.9; }
+#content #posts .postFooter a { color:#898989; padding:0 2px; }
+#content #posts .postFooter a:hover { color:#f93; }
+
+#content .pageNavi { color:#333; text-align:right; }
+#content .pageNavi a { padding:2px 2px; }
+#content .pageNavi span { padding:1px 2px 1px 2px; border:1px solid #d3d3d3; font-weight:bold; color:#999; }
+
+.context { background:url(sDH60.png) no-repeat 0 0; height:39px; line-height:39px; margin-bottom:14px; overflow:hidden; padding:0 0 0 10px; text-align:center; overflow:hidden; }
+
+
+/* SIDEBAR */
+#sidebar { float:right; width:260px; overflow:hidden; color:#898989; }
+#sidebar .module { position:relative; margin-bottom:16px; background-position:0 100%; }
+#sidebar .modTop { height:26px; overflow:hidden; background:url(sDH61.png) no-repeat 0 0; }
+#sidebar .modBody { padding:10px 8px 10px 12px; }
+#sidebar .count, #sidebar .count a { color:#aaa; }
+#sidebar .count { margin-left:6px; }
+#sidebar h2 { position:absolute; left:0; top:0; z-index:9999; display:block; height:26px; width:260px; overflow:hidden; text-indent:-9999px; }
+#sidebar li { margin-bottom:2px; text-indent:14px; background:url(sDH62.png) no-repeat 0 6px; }
+#sidebar .more { position:absolute; right:10px; top:4px; z-index:999999; display:block; width:44px; height:19px; overflow:hidden; text-align:left; text-indent:-9999px; }
+#sidebar .more a { display:block; width:44px; height:19px; overflow:hidden; background:url(sDH63.png) no-repeat 0 0; }
+#sidebar .more a:hover { background-position:0 100%; }
+
+#sidebar #search { margin-bottom:16px; height:57px; overflow:hidden; border:0; background:url(sDH64.png) no-repeat 0 0; }
+#sidebar #search h2, #sidebar  #search .modTop { display:none; }
+#sidebar #search .modBody { padding:0; }
+#sidebar #search form { padding:14px 0 0 16px; }
+#sidebar #search .textField { float:left; padding:6px 6px 0; width:186px; height:20px; overflow:hidden; font:12px/normal Tahoma, Arial, sans-serif; color:#999; border:1px solid #d0d0d0; background:url(sDH64.png) no-repeat 0 -67px; }
+#search .button { float:left; width:29px; height:28px; overflow:hidden; border:0; text-indent:-9999px; background:url(sDH64.png) no-repeat 0 100%; cursor:pointer; }
+
+#profile h2 { background:url(sDH65.png) no-repeat 10px 6px; }
+#profile img.avatar { float:left; padding:1px; width:96px; height:96px; overflow:hidden; border:1px solid #cecece; }
+#profile .author, #profile .about { float:right; width:130px; overflow:hidden; }
+#profile .author { margin-bottom:2px; font-size:12px; }
+#profile .author a { color:#666; }
+#profile .author a:hover { color:#f93; }
+
+#calendar h2 { background:url(sDH65.png) no-repeat 10px -28px; }
+#calendar table { margin-bottom:6px; width:100%; border-collapse:collapse; }
+#calendar td { text-align:center; }
+#calendar .modBody { padding:10px 12px; }
+#calendar .calendarHead td { padding-bottom:4px; font-weight:bold; color:#666; }
+#calendar .calendarHead td a { padding:0 2px; color:#666; }
+#calendar .calendarHead td a:hover { color:#f93; }
+#calendar .week td { padding:2px; color:#fff; background:#ddd; border:1px solid #eee; }
+#calendar .week td.d6, #calendar .week td.d0 { background:#ccc; }
+#calendar .day td { padding:1px; font-family:Arial, sans-serif; border:1px solid #eee; }
+#calendar .day td.today { background:#f5f5f5; }
+
+#cats h2 { background:url(sDH65.png) no-repeat 10px -62px; }
+#tags h2 { background:url(sDH65.png) no-repeat 10px -95px; }
+#nPosts h2 { background:url(sDH65.png) no-repeat 10px -130px; }
+#nComments h2 { background:url(sDH65.png) no-repeat 10px -164px; }
+#archives h2 { background:url(sDH65.png) no-repeat 10px -198px; }
+#links h2 { background:url(sDH65.png) no-repeat 10px -266px; }
+#login h2 { background:url(sDH65.png) no-repeat 10px -334px; }
+#meta h2 { background:url(sDH65.png) no-repeat 10px -232px; }
+#meta .subscribe { margin:0 14px 6px 0; padding-left:20px; background:url(sDH66.png) no-repeat 0 2px; }
+#meta .subscribe a { color:#898989; }
+#meta .subscribe a:hover { color:#f93; }
+#meta li { float:left; padding:0 10px 6px 0; width:110px; height:16px; overflow:hidden; margin-bottom:0; text-indent:0; background:none; }
+#meta .statistics { clear:both; padding:4px 0; display:block; }
+#meta .statistics .count { margin:0; }
+
+#products { margin:20px 0 16px 3px; }
+#products a { float:left; display:block; }
+#products .icity { margin-right:14px; }
+#products .yohocity { padding:13px 0; }
+
+#comments { margin-top:20px; }
+#comments h2 { background:url(sDH67.png) no-repeat 0 0;
+border-bottom:1px solid #CECECE; height:21px; margin-bottom:10px; overflow:hidden; padding:0 0 8px 16px; text-indent:-9999px; }
+
+/* 评论 */
+#comments { margin-bottom:24px; }
+#comments h2 { margin-bottom:0; }
+#comments li { padding:18px 10px 18px 14px; }
+#comments li.style2 { background:#f5f5f5; }
+#comments li .info { float:right; width:580px; overflow:hidden; }
+#comments li h4 { margin-bottom:0; }
+#comments li h4 .time { margin-left:4px; font-family:Verdana, Geneva, sans-serif; font-weight:normal; font-size:11px; color:#999; }
+#comments ol img { float:left; margin-top:3px; padding:1px; width:48px; height:48px; overflow:hidden; border:1px solid #cecece; }
+#comments .pagenator { margin-top:-20px; }
+.reCmtBody { margin:10px 2px 0 0; padding:4px 6px; border:1px solid #ddd; background:#f9f9f9; }
+.reCmtBody span { padding:0 4px; }
+.reCmtBody .author { padding-left:0; }
+.reCmtBody .time { font-family:Verdana, Geneva, sans-serif; font-size:11px; }
+
+/* 内页评论 */
+/*#commentForm ul { padding:10px 18px; font-size:14px; }
+#commentForm li { margin-bottom:10px; }*/
+#commentForm h2 { background:url(sDH68.png) no-repeat 0 0; border-bottom:1px solid #CECECE; height:21px; margin-bottom:10px; overflow:hidden; padding:0 0 8px 16px; text-indent:-9999px;  }
+#commentForm form { padding:10px 18px; font-size:14px; }
+#commentForm form a, #commentForm form span { font-size:12px; }
+#commentForm div { margin-bottom:10px; }
+#commentForm label { /*float:left;*/ padding-right:6px; cursor:pointer; }
+#commentForm .textField { /*float:left;*/ padding:4px 4px 0; width:178px; height:19px; overflow:hidden; font:14px/normal Tahoma, Arial, sans-serif; color:#898989; border:1px solid #ddd; }
+#commentForm textarea { margin-left:48px; /*float:left;*/ padding:4px 4px 0; width:460px; height:160px; overflow:auto; font:14px/normal Tahoma, Arial, sans-serif; color:#898989; border:1px solid #ddd; }
+#commentForm #cemail { margin-left:8px; }
+#commentForm #submit_comment { margin:0 10px 0 50px; padding-left:3px; width:82px; height:30px; overflow:hidden; font:14px/normal Tahoma, Arial, sans-serif; font-weight:bold; color:#fff; border:0; background:url(sDH69.png) no-repeat 0 0; cursor:pointer; }
+#commentForm #cremember { position:relative; bottom:-2px; }
+
+
+
+
+/* FOOTER */
+#footer { margin:60px 0 40px; text-align:center; }
+#footer a { color:#666; }
+#footer a:hover { color:#f93; }
+#footer .copyright { margin-top:6px; }
+#custom .modBody { padding:10px 0; text-align:center; }
+#custom2 .modBody { padding:10px 0; text-align:center; }
+#custom3 .modBody { padding:10px 0; text-align:center; }

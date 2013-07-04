@@ -1,0 +1,245 @@
+{include file="site_head.html"}
+
+<!--site_head  *top and title END-->
+
+<link href="{$temp_dir}/css/common.css" rel="stylesheet" type="text/css" />
+<link href="{$temp_dir}/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$temp_dir}/css/jquery.fancybox-1.3.4.css" media="screen" />
+<script type="text/javascript" src="{$temp_dir}/js/common.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/jquery.min.js"></script>
+{literal}
+<script>
+		!window.jQuery && document.write('<script src="{$temp_dir}/js/jquery-1.4.3.min.js"><\/script>');
+</script>
+{/literal}
+<script type="text/javascript" src="{$temp_dir}/js/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/jquery.fancybox-1.3.4.pack.js"></script>
+</head>
+{literal}
+
+<script>
+function checkbox()
+{
+var str=document.getElementsByName("photo_handle[]");
+var list_upid=document.getElementById("list_upid").value;
+var class_id=document.getElementById("class_id").value;
+var objarray=str.length;
+var chestr="";
+var edit_a=document.getElementById("photo_edit");
+for (i=0;i<objarray;i++)
+{
+  if(str[i].checked == true)
+  {
+   chestr+="&photo_handle%5B%5D="+str[i].value;
+
+  }
+}
+if(chestr == "")
+{
+edit_a.href="index.php?display=photo_edit";
+
+}
+else
+{
+  edit_a.href="index.php?display=photo_edit&do=batch_edit&list_upid="+list_upid+"&class_id="+class_id+chestr;
+ // alert(edit_a.href);
+  //alert("您先择的是："+edit_a.href+"");
+}
+}
+
+
+function check_set_cover(){
+
+var str=document.getElementsByName("photo_handle[]");
+var cover_path=document.getElementById("cover_path");
+
+var j=0;
+for (i=0;i<str.length;i++)
+{
+  if(str[i].checked == true)
+  {
+   j+=1;
+  cover_path.value=str[i].title;
+  }
+}
+
+if(j==0){
+  alert("请选择一张图片作为封面.")
+  window.stop();
+}
+
+if(j>1){
+  alert("只能选择一张图片作为封面，请重新挑选。")
+  window.stop();
+}
+
+
+
+//alert(cover_path.value);
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			*   Examples - images
+			*/
+
+
+			$("a[rel=example_group]").fancybox({
+
+				'titlePosition'	        : 'inside',
+				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over"  style="">[' + (currentIndex + 1) + ' / ' + currentArray.length+']'+(title.length ? " &nbsp; " + title : "") + '</span>';
+				}
+			});
+			var  winWidth = document.body.clientWidth;
+			var  winHeight = document.body.clientHeight;
+			var  width_p=(850/winWidth)*100+"%";
+			var  heidht_p=300/winHeight;
+			//alert(width_p);
+			$("#photo_edit").fancybox({
+				'width'				: width_p,
+				'height'			: '75%',
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'type'				: 'iframe'
+			});
+
+			/*
+			*   Examples - various
+			*/
+
+
+		});
+</script>
+
+{/literal}
+
+<body>
+<div id="all">                                                      <!--webpage  start-->
+
+<!--site_nav  start-->
+
+{include file="site_nav.html"}
+
+<!--site_nav  END-->
+
+
+
+  <div  id="main">               <!--main  start-->
+
+        <div  id="main_head"> <!--main_head  start-->
+           <img src="{$temp_dir}/images/photo_center.png" width="31" height="34"   class="control_logo"/>
+           <h1>相片列表</h1>
+           <div id="news">
+                   <img src="{$temp_dir}/images/news.gif" width="20" height="24" /><font>飞鸽消息：</font>
+                   <div  id="news_list">
+                      <script type="text/javascript" src="{$temp_dir}/js/news.js"></script>
+                   </div>
+           <div class="clear"></div>
+           </div>
+        </div>
+        <div  id="main_content">    <!--main_left start-->
+
+       <div  class="content_block   main_tool   resource_main_tool">
+               <div  class="content_block_title">相片列表</div>
+               <div  class="content_block_main">
+                        <span  class="tool_info"><img src="{$temp_dir}/images/user_pic.gif" width="16" height="17" /><b>{$album_name}</b>{$pic_num}张
+                        </span>
+                        <span  class="tool_bar">
+                             <form action="" method="get">
+                                   <input name="input" type="checkbox" value=""   onclick="select_all(this.checked);"/>全选
+                                   <label>
+                                     <input type="button" name="shield" id="add"  onclick="window.location.href='index.php?display=photo_add&list_upid={$list_upid}'"    value="  上传相片"/>
+                                     <input type="button" name="button" id="del"  onclick="CheckForm(this);Get_id('batch_do').value='batch_del';document.photo_list_handle.submit();" value="  删除所选"/>
+                                     <a  style="color:#317FD5">移动相片至</a>
+                                     <select name="jumpMenu2" id="top_jump" onchange="if(this.selectedIndex>0)Get_id('batch_do').value='chg_class';Get_id('chg_class_id').value=this.options[this.selectedIndex].value;document.photo_list_handle.submit();">
+                                          <option value="" selected="selected" >相册分类</option>
+
+                                          {section  name=album_list  loop=$album_list}
+
+                                          <option value="{$album_list[album_list].classid}">{$album_list[album_list].classname}</option>
+
+                                          {/section }
+
+                                    </select>
+                                   </label>
+                             </form>
+                        </span>
+                        <div  class="sep_border"></div>
+                        <span  class="tool_clsss">
+                        <b><a>其他操作</a></b><h4>：</h4><a  href="javascript:void(0);" onclick="edit_photo();">【显示操作】</a><h4></h4>
+                        <a href="" id="photo_edit"   onclick="checkbox();" >编辑相片信息</a><h4></h4>
+                        <a style="cursor:pointer"  onclick="Get_id('batch_do').value='set_cover';Get_id('display').value='photo_edit';check_set_cover();document.photo_list_handle.submit();">设为封面</a><h4></h4>
+                        <a href="index.php?display=album&list_upid={$list_upid}">&laquo;返回相册列表</a>
+                        </span>
+                        <div  class="sep_border"></div>
+
+             </div>
+           <div class="clear"></div>
+           </div>
+
+
+
+           <div  class="content_block   latest_act   resource_list   photo_list"     id="list_check">
+
+               <div  class="content_block_main">
+                  <form action="index.php" method="POST"  name="photo_list_handle">
+                  <INPUT TYPE=hidden NAME=display  VALUE="photo" id="display"  style="visibility:hidden">
+                  <INPUT TYPE=hidden NAME=list_upid  VALUE="{$list_upid}"  id="list_upid" style="visibility:hidden">
+                  <INPUT TYPE=hidden NAME=class_id  VALUE="{$class_id}" id="class_id"  style="visibility:hidden">
+                  <INPUT TYPE=hidden NAME=do_id  VALUE="{$do_id}"   style="visibility:hidden">
+                  <input name="do" type="hidden"   id="batch_do" value="batch_del"  style="visibility:hidden"/>
+                  <input name="cover_path" type="hidden"   id="cover_path" value=""  style="visibility:hidden"/>
+                  <input name="chg_class_id" type="hidden"   id="chg_class_id" value="0"   style="visibility:hidden"/>
+
+
+                  <ul>
+                       <li>
+
+                       {section  name=photo_list  loop=$photo_list}
+
+                       <div   class="photo_box">
+                       <input name="photo_handle[]" type="checkbox"   class="visitor_list_check"  value="{$photo_list[photo_list].pid}"  title="{$photo_list[photo_list].cover_path}" style="visibility:hidden" />
+                       <input name="photo_path[{$photo_list[photo_list].pid}]" type="hidden"  value="{$photo_list[photo_list].cover_path}"style="visibility:hidden;" />
+                       <a  rel="example_group" href="{$photo_list[photo_list].path}" title="{$photo_list[photo_list].title}" ><img src="{$photo_list[photo_list].thumb_path}" width="100" height="75"  class="{$photo_list[photo_list].cover_class}"/></a><font>{$photo_list[photo_list].title_sub}</font>
+                       </div>
+
+                       {/section}
+
+
+                       </li>
+
+
+
+
+
+
+
+                  </ul>
+               </form>
+               <div class="page"><div class="sabrosus">{$pagenav}</div></div>
+               <div class="clear"></div>
+               </div>
+
+
+
+
+           <div class="clear"></div>
+           </div>
+
+
+        </div> <!--main_left  end-->
+
+  </div>                          <!--main  end-->
+
+<!--site_foot start-->
+
+{include file="site_foot.html"}
+
+<!--site_foot  END-->

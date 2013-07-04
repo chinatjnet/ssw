@@ -1,0 +1,101 @@
+{include file="site_head.html"}
+<link href="{$temp_dir}/index9data/sDH9.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+<div id="wrapper">
+{include file="site_nav.html"}
+﻿<!-- 正文开始 -->
+  <div class="mainContent">
+    <div class="column">
+      <div id="viewFocus" class="columnBody">
+		<h2><strong>最新一期</strong></h2>
+		
+{$article_108_imgtext}
+		             
+	  </div>
+	  <div class="columnFooter"></div>
+    </div>
+
+
+{literal}
+<style type="text/css">
+#class_nav{height:30px;line-height:30px;font:Tahoma, Arial, sans-serif;font-size:14px;font-weight:bold;border:#E1E1E1 solid 1px;margin-bottom:15px;}
+#class_nav li{float:left;margin-right:15px;}
+#class_nav ul font{float:left}
+#class_nav a{color:#2E9B40}
+#viewList .viewItem IMG{height:auto;width:auto;border:0px;}
+#viewList .viewItem  p{font:Tahoma, Arial, sans-serif;font-size:13px;text-indent:26px;}
+</style>
+{/literal}
+
+
+<div  id="class_nav">
+	<ul >
+        <font>&nbsp;&nbsp;当前位置:&nbsp;&nbsp;&nbsp;&nbsp;</font> {$location_nav}
+
+	</ul>
+	<div style="clear:both"></div>
+</div>
+	
+	
+	<!-- 往期回顾开始 -->
+    <div class="column">
+      <div id="viewList" class="columnBody">
+		<h2><strong>最新发表</strong></h2>
+        <div class="viewLoops">
+		
+ {$emotion_list}
+		  
+
+
+                   <!-- 结束 --> 
+        </div>
+        <div class="pagenator">
+         {$emotion_list_page}
+
+       </div>
+      </div>
+      <div class="columnFooter"></div>
+    </div>
+  </div>
+  <div class="subContent">
+
+    <div class="module promotion">
+
+    </div>
+	<div id="magazine" class="module">
+      <h3><strong>城客导读</strong></h3>
+      <div class="icity"><a href="http://www.icity.cn"><img src="{$temp_dir}/index9data/sDH22.jpg" width="106" height="140" alt="" /></a></div>
+      <div class="info">
+
+
+        <h5><a href="http://www.icity.cn/catalog" target="_blank">【城客】创意之城</a></h5>
+        我们生活的城市无论是建筑、文化和各种艺术形态都在不断变化，寻求新的空间和体验成为一种积极的生活姿态。
+
+
+        <div class="readmore"><a href="http://www.icity.cn">阅读更多&raquo;</a></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+
+    <div id="suggestion"><a href="ticket/post" target="blank">我有意见-用户提交专题通道»</a></div> 
+    <div id="syndication" class="module">
+	
+  {include file="site_rss.html"}
+  
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="clear"></div>        
+  <div class="clr"></div>
+
+        <div id="footer">
+            <div class="utilityMenu"><a target="_blank" href="http://news.blogbus.com">媒体报道</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.blogbus.com/about/about.html">关于我们</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.blogbus.com/about/jobs/jobs.html">工作机会</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.blogbus.com/about/blogserviceterm.html">相关法律</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.blogbus.com/about/adservice.html">广告服务</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.blogbus.com/store/">Bus小店</a>&nbsp;|&nbsp;<a target="_blank" href="http://passport.blogbus.com/register_form">申请博客</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.blogbus.com/about/sitemap.html">网站地图</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.blogbus.com/about/partners.html">合作伙伴</a></div>
+            <div class="copyright">&copy; 2002-2009 BlogBus.com, All Rights Reserved. 博客大巴  版权所有  沪ICP B2-20080056号</div>
+        </div>
+    </div>
+
+</body>
+</html>

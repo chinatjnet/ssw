@@ -1,0 +1,125 @@
+错误SQL语句：
+SELECT * FROM `".DB_PRE."class`  WHERE  belong=4  AND  user= ORDER BY c_order
+客户IP:127.0.0.1
+时间 :2011-04-25 17:22:59
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."class`  WHERE  belong=4  AND  user= ORDER BY c_order
+客户IP:127.0.0.1
+时间 :2011-04-25 17:23:16
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  album_id=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:23:29
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  album_id=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:27:18
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  album_id=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:27:19
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  album_id=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:27:19
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  album_id=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:27:20
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  album_id=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:27:57
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:28:02
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=`175`  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:28:08
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:28:15
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:28:32
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:28:41
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:14
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:42
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:45
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:45
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:46
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:46
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:46
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:46
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:46
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:59
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:59
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."albums`  WHERE  `album_id`=175  AND  user=0
+客户IP:127.0.0.1
+时间 :2011-04-25 17:29:59
+

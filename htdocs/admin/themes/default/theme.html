@@ -1,0 +1,114 @@
+﻿{include file="site_head.html"}
+
+<!--site_head  *top and title END-->
+
+<link href="{$temp_dir}/css/common.css" rel="stylesheet" type="text/css" />
+<link href="{$temp_dir}/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$temp_dir}/js/common.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/easy.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/main.js"></script>
+</head>
+
+
+<body>
+<div id="all">                                                      <!--webpage  start-->
+
+<!--site_nav  start-->
+
+{include file="site_nav.html"}
+
+<!--site_nav  END-->
+  
+  
+  
+  <div  id="main">               <!--main  start-->
+  
+        <div  id="main_head"> <!--main_head  start-->
+           <img src="{$temp_dir}/images/theme_center.png" width="31" height="34"   class="control_logo"/>
+           <h1>模板选择</h1>
+           <div id="news">
+                   <img src="{$temp_dir}/images/news.gif" width="20" height="24" /><font>飞鸽消息：</font>
+                   <div  id="news_list">
+                      <script type="text/javascript" src="{$temp_dir}/js/news.js"></script>
+                   </div>
+           <div class="clear"></div>
+           </div>
+        </div>
+        <div  id="main_content">    <!--main_left start-->
+  
+           <div  class="content_block   emotion_publish"> 
+               <div  class="content_block_title">模板选择</div> 
+               <div  class="info_main">
+                   <div  id="top_tool"  class="info_title"   style="border-bottom-style:dashed">
+                   <img src="{$temp_dir}/images/user_system.gif" width="16" height="17" /> <b href="javascript:void(0);"  class="info_now">模板选择</b>
+                   <div class="clear"></div>
+                   </div>
+                   
+               
+                   <div  id="info_content">
+                   <form action="" method="get"  name="selfinfo_edit">
+                   
+                   <span  class="info_span"><b>当前模板</b></span>
+ 
+                   <span  class="info_span"> <img src="{$theme_present_view}" width="150" height="150" style="padding:6px;border:#cfcfcf 1px solid;margin-right:15px;"/><strong>{$theme_present}</strong></span>
+                   
+                   <span  class="info_span"><b>可用模板</b></span>   
+                    
+                   <span  class="info_span">
+                    <ul  class="theme_list">
+
+					  {section  name=theme  loop=$theme}
+
+                      <li>
+                         <img src="{$theme[theme].view}" width="150" height="150" /><br>
+                         <font>{$theme[theme].name}</font><br>&nbsp;&nbsp;&nbsp;
+                         <a  href="index.php?display=theme&do=theme_on&theme={$theme[theme].name}">启用</a>&nbsp;&nbsp;&nbsp;
+                         <a  href="index.php?display=theme&do=theme_view&theme={$theme[theme].name}">预览</a>
+                      </li>
+
+					  {/section}
+                      
+                                   
+                    </ul>    
+                    </span>
+                                   
+                   <span   class="info_span">
+                      <b></b>
+                      <p></p>  
+                   </span>   
+                          
+                   
+                   </form>                      
+                   <div class="clear"></div>
+                 </div>
+                   
+                   
+                   
+                   
+               </div>
+           <div class="clear"></div>
+           </div>
+  
+ 
+                         <div  style="display:none">
+                         <form  name="add_class">      
+                         <span  id="friend_add" >
+                           <b>分类名称&nbsp;&nbsp;&nbsp;&nbsp;</b> 
+                           <input name="" type="text"   class="article_title"    onfocus="this.style.border='#21759B  solid  1px'"  onblur="this.style.border='#A5ACB2  solid  1px'"/><br>
+                           <input type="button" name="shield"   class="article_act"  value="添加分类"  onclick="document.add_class.submit()"/>
+                         </span>
+                          </form>
+                        </div>
+
+  
+  
+        </div> <!--main_left  end-->
+  
+  </div>                          <!--main  end-->
+  
+<!--site_foot start-->
+
+{include file="site_foot.html"}
+
+<!--site_foot  END-->

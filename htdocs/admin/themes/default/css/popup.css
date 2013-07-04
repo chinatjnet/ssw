@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+#popup_main{ width:690px;
+     margin:0px auto;
+	padding:0px 10px;
+	padding-bottom:40px;
+	font-size:13px;
+	background:url(../images/all_bg.gif) center repeat-y;
+	font-family:Arial, Helvetica, sans-serif;
+	
+}
+#popup_main  .sep_border{ width:690px;}
+#popup_main  .popup_title{ width:673px; margin-bottom:20px; background:#535252; color:#FFF; font-weight:bold;padding:5px;padding-left:20px;}
+#head_tool  b,#bottom_tool  b{ display:block; float:left;margin-left:10px;height:25px;line-height:25px; width:100px; text-align:center; color:#336799; background:#F3F8FB; border:1px  solid;border-bottom-color:#47627D;border-right-color:#47627D;border-top-color:#D6E9F0;border-left-color:#D6E9F0; cursor: pointer}
+#head_tool input,#bottom_tool input{ float:left;margin-top:8px;}
+#head_tool  font,#bottom_tool  font{ float:left;margin-right:50px;margin-top:8px;margin-left:10px;}
+#head_tool    select{ background:url(../images/select_bg.gif)    repeat-x; border:1px  solid  #6D6D6D; color:#3C3C3C;padding:3px  0px; color:#333;margin-left:10px;}
+
+
+
+#list_check  input{ float:left;}
+#list_check  .album_select{ margin-top:25px;}
+#list_check   li{ padding:10px  0px; display:block; float:left;width:690px;}
+#list_check   a  img{ float:left;margin-left:20px; margin-right:25px; margin-bottom:15px; padding:20px   5px;border:#DCDCDC 1px solid;}
+#list_check   span { display:block; float:left;width:400px; margin-bottom:10px;}
+#list_check   span  b{ float:left; margin-right:20px;margin-left:10px;margin-top:7px; font-size:12px;}
+#list_check   .info_input{height:24px;line-height:24px;width:250px;padding-left:4px; font-size:14px; color:#606060; background:#fff; border:1px  solid  #A5ACB2;}
+
+#list_check   li  select{ background:url(../images/select_bg.gif)    repeat-x; border:1px  solid  #6D6D6D; color:#3C3C3C;padding:2px  0px; color:#333;}
+
+
+
+
+
+
+
+
+
+
+
+
+#list_check   textarea{ height:60px; width:250px; background:#FFF;padding:4px; border:1px  solid  #A5ACB2;font-size:14px; color:#606060;}

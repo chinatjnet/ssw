@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	color:#666666;
+}
+#header{
+	margin:0 auto;
+	width:700px;
+	height:50px;
+	margin-top:15px;
+}
+#header h1{
+	width:270px;
+	height:48px;
+	background:url(logo.gif) no-repeat;
+	margin-left:20px;
+	float:left;
+	display:inline;
+}
+#header span{
+	float:right;
+	display:inline;
+	padding:5px;
+	margin:22px 20px 0 0;
+}
+#main{
+	width:700px;
+	margin:0 auto;
+	background:url(index_06.gif) no-repeat center bottom;
+	padding-bottom:40px;
+	margin-top:25px;
+}
+#main h2{
+	font-weight:bold;
+	margin-left:40px;
+	padding:5px;
+	padding-top:20px;
+}
+.text_show{
+	width:626px;
+	height:264px;
+	overflow:auto;
+	padding:8px;
+	margin:0 auto;
+}
+.text_show h1{
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:15px;
+}
+.text_show h3{
+	font-weight:bold;
+	margin-top:15px;
+}
+.text_show li{
+	margin-top:14px;
+	padding-left:25px;
+	list-style:lower-roman;
+	line-height:18px;
+}
+.text_show p{
+	padding-left:25px;
+	margin-bottom:14px;
+}
+.botton_area{
+	text-align:center;
+	margin-top:15px;
+}
+.botton_area input{
+	padding:0 5px;
+	text-align:center;
+}
+#step{
+	width:700px;
+	margin:0 auto;
+}
+.step1{
+	background:url("stepnum.gif") no-repeat scroll 0 8px transparent;
+	height:61px;
+	margin: 26px 0 0 220px;
+}
+.step2{
+	background: url("stepnum.gif") no-repeat scroll 0 -92px transparent;
+	height:61px;
+	margin: 26px 0 0 220px;
+}
+.step3{
+	background: url("stepnum.gif") no-repeat scroll 0 -192px transparent;
+	height:61px;
+	margin: 26px 0 0 220px;
+}
+.step4{
+	background: url("stepnum.gif") no-repeat scroll 0 -292px transparent;
+	height:61px;
+	margin: 26px 0 0 220px;
+}
+#step h1{
+	font-size:36px;
+	padding-left:55px;
+	color:#6CA1B4;
+	font-weight:bold;
+}
+#step p{
+	padding-left:60px;
+}
+.step_show{
+	height:30px;
+	left:80px;
+	position:relative;
+}
+.step_bg{
+	background: url("bg_stepstatus.gif") no-repeat scroll -750px 0;
+	height:9px;
+	position:absolute;
+	width:535px;
+	top:15px;
+}
+.step_show ul{
+	position:absolute;
+	z-index:5;
+}
+.step_show li{
+	float:left;
+	width:175px;
+	background: url("bg_repno.gif") no-repeat scroll 0 -38px transparent;
+	height:30px;
+}
+.step_show .current{
+	background: url("bg_repno.gif") no-repeat scroll 0 -71px transparent;
+}
+.step_show .unactivated{
+	background: url("bg_repno.gif") no-repeat scroll 0 -103px transparent;
+}
+.show_content{
+	background:#F7FBFE;
+	margin:0 auto;
+	width:96%;
+}
+.show_content p{
+	padding:15px 0 15px 25px;
+}
+.show_content input{
+	margin-right:15px;
+}
+.show_table {
+	margin:10px 0 0 40px;
+}
+.show_table th{
+	color:#6CA1B4;
+	padding:5px;
+}
+.show_table td{
+	padding:5px;
+}
+.now_setting{
+	padding-left:25px!important;
+}
+.viable{
+	background:url("bg_repno.gif") no-repeat scroll 0 -145px transparent;
+}
+.unviable{
+	background:url("bg_repno.gif") no-repeat scroll 0 -193px transparent;
+}
+.textbox{
+	width:200px;
+	color:#666666;
+}
+#install_info{
+	width:630px;
+	height:310px;
+	border:1px solid #B5CFD9;
+	margin:10px auto;
+	overflow:hidden;
+	padding:5px;
+}
+.complete_show{
+	width:626px;
+	overflow:auto;
+	padding:8px;
+	margin:0 auto;
+}
+.complete_show h1{
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:15px;
+	color:#690;
+}
+.complete_show p{
+	margin-bottom:15px;
+}
+.complete_show a{
+	text-decoration:none;
+	color:#666666;
+}
+.complete_show a:hover{
+	text-decoration:underline;
+}

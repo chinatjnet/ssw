@@ -1,0 +1,149 @@
+{include file="site_head.html"}
+
+<link href="{$temp_dir}/blogbusdata/sDH23.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="{$temp_dir}/blogbusdata/sDH27.css" type="text/css"  />
+<link rel="stylesheet" href="{$temp_dir}/blogbusdata/sDH29.css" type="text/css"  />
+</head>
+
+<body>
+  <div id="wrapper">
+
+{include file="site_nav.html"}
+
+  <div class="mainContent">
+    <div class="pageNavi">
+      <ul>
+        {$location_nav}
+
+      </ul>
+      <div class="fontSwitcher"> </div>
+    </div>
+    <div class="column" id="detailWrapper">
+      <div id="detail" class="columnBody">
+
+        <div class="postHeader">
+          <h2>{$article_108_title}</h2>
+          <h5>{$article_108_time}</h5>
+          <div class="menubar">
+            <div class="avatar">
+              <a href="http://home.blogbus.com/profile/qfmeng" target="_blank"><img src="{$s_headpic_s}" width="48" height="48" alt="" /></a>
+            </div>
+            <div class="info">
+
+              作者：<a href="http://home.blogbus.com/profile/qfmeng" target="_blank">{$s_nickname}</a>
+              &nbsp;来源：<a href="#" >{$article_108_origin}</a>
+              <br />
+              <a href="index.php?display=self_info&upid=1&type=index" target="_blank"><img src="{$temp_dir}/blogbusdata/sDH36.png" width="81" height="23" alt="个人资料" class="button" /></a>
+
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="postBody">
+          
+          <p>
+		  {$article_108_content}
+          </p>
+
+          <div class="clear"></div>
+          <div class="tag"><strong>标签：</strong>
+          	          	 <a href="">{$article_108_title}</a>
+          	            
+          </div>
+                    <div class="share_new">
+
+          	<span><span id="share_245f6b2d877c9af4dcf2bf5bcdd20294">0</span>人分享</span></a>
+            
+          	<span class="share_new_other"><a href="#" class="share_new_other_">分享到其他网站</a>
+
+            </span>
+          </div>  
+          <div class="clear"></div> 
+        </div>
+        <div align="center" style="margin:10px 0;"></div>
+        <div class="postFooter">
+          <div class="related">
+            <h3>相关阅读</h3>
+
+            <ul>
+
+              {$article_108_random}   
+
+            </ul>
+
+            <div class="related_pic">
+              
+              </div>
+            
+            <div class="clear"></div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="columnFooter"></div>
+    </div>
+
+    <div id="comments" class="commentList">
+      
+      
+    </div>
+    <div id="commentForm"></div>
+  </div>
+  <div class="subContent">
+    <!-- 频道搜索 -->
+    <div id="search" class="module">
+<h3>频道搜索</h3>
+<form id="form1" name="form1" method="get" action="/search">
+  <input type="text" name="q" id="" class="textfield" value="频道搜索..." onfocus="if (this.value=='频道搜索...') this.value=''" />
+  <input name="" class="button" type="submit" value="提交" />
+  <input type="hidden" name="c" value="4" />
+  <div class="tag"><strong>搜索热点：</strong>
+  
+    <a href="/search?q=爱情&c=4">爱情</a> 
+    <a href="/search?q=美食&c=4">美食</a> 
+    <a href="/search?q=indie&c=4">indie</a> 
+    <a href="/search?q=手工&c=4">手工</a> 
+    
+  </div>
+</form>
+</div>
+    <div class="promotion">
+      <div class="borderlineSt"></div>
+      <div class="borderlineSt"></div>
+    </div>
+
+
+<!--精彩推荐-->
+    <div id="spotlight" class="module">
+      <h3 id="recommended"><strong>精彩推荐</strong></h3>
+      <div class="featured"> <a href="http://pindao.blogbus.com/sejie/2011022816224.html" target="_blank"><img src="{$temp_dir}/blogbusdata/sDH38.jpg" width="60" height="60" alt=CHANEL展览/></a>
+        <div class="info">
+<h5><a href="http://pindao.blogbus.com/sejie/2011022816224.html" target="_blank">CHANEL展览</a></h5>
+       香奈儿的创意传统，从香奈儿女士传承至卡尔·拉格斐，一如既往地保持与作家和艺术家之间的智慧交流。</div>
+        <div class="clear"></div>
+      </div>
+      <ol>
+         {$article_108_latest}
+      </ol>
+    </div>    
+ 
+ 
+ <!--RSS订阅-->
+  <div id="syndication" class="module">
+
+{include file="site_rss.html"}
+  <div class="clear"></div>
+</div> 
+
+<!--责任编辑-->
+        </div>
+
+  <div class="clear"></div>
+
+    
+     <div class="promotion_new"></div>
+    </div>
+
+
+
+{include file="site_foot.html"}

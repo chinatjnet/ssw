@@ -1,0 +1,60 @@
+#picoboxMask{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:none;
+    background-color:#000;
+    filter:alpha(opacity=20);
+    opacity:0.2;
+    left:0;
+    top:0;
+    z-index:4000;
+}
+#picobox{
+    width:400px;
+    padding:2px;
+    height:300px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-200px;
+    margin-top:-150px;
+    background-color:#fff;
+    z-index:4001;
+    border:3px solid #666;
+    overflow:hidden;
+    display:none;
+}
+#picobox h1.picoboxTitle{
+    height:2em;
+    line-height:2em;
+    background-color:#efe;
+    padding:0 0.5em;
+    position:relative;
+    margin:0;
+    font-size:12px;
+}
+#picobox h1.picoboxTitle a{
+    text-decoration:none;
+    color:#c00;
+    line-height:2em;
+    text-align:center;
+    right:2px;
+    top:0px;
+    position:absolute;
+    width:2em;
+    height:2em;
+}
+#picobox div.picoboxBody{
+    font-size:12px;
+    padding:2px;
+}
+
+#frontLogin { font-size:12px; color:#666; padding:0 8px 0;  }
+#frontLogin #frontLoginArea {  padding: 20px 2px 0; }
+#frontLogin #frontLoginArea form { margin:0; }
+#frontLogin #frontLoginArea table { font-size:12px; }
+#frontLogin #frontLoginArea table th { padding-bottom:10px; }
+#frontLogin #frontLoginArea table td { padding-bottom:10px; }
+#frontLogin #frontLoginArea table td .input { height:18px; width:210px; border:1px solid #ccc; }
+#frontLogin #frontLoginArea table td .button { background: url(sDH70.gif) no-repeat scroll center bottom; border:medium none; color:#1B6F01; font-size:12px; height:25px; line-height:25px; width:55px; }

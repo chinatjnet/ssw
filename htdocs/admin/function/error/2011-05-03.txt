@@ -1,0 +1,75 @@
+错误SQL语句：
+SELECT * FROM `".DB_PRE."visitors` WHERE `ip`=127.0.0.1
+客户IP:127.0.0.1
+时间 :2011-05-03 09:08:13
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."visitors` WHERE `ip`=127.0.0.1
+客户IP:127.0.0.1
+时间 :2011-05-03 09:08:41
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444282', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:38:02
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444321', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:38:41
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444345', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:39:05
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444370', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:39:30
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444420', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:40:20
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444443', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:40:43
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444502', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:41:42
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444518', '1', '1', 0, '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:41:58
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444526', '1', '1', 0, '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:42:06
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444530', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:42:10
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444538', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:42:18
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444680', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:44:40
+
+错误SQL语句：
+INSERT INTO `".DB_PRE."visitors` (`vid`, `ip`, `originpage`, `firstpage`, `dateline`, `total`, `today`, `shield`, `origin`, `user`) VALUES (NULL, '127.0.0.1', 'http://localhost/sunsonworld/admin/function/visitor_record.php', 'http://localhost/sunsonworld/admin/function/visitor_record.php', '1304444686', '1', '1', '0', '1', '0')
+客户IP:127.0.0.1
+时间 :2011-05-03 09:44:46
+

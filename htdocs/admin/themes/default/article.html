@@ -1,0 +1,150 @@
+﻿{include file="site_head.html"}
+
+<!--site_head  *top and title END-->
+
+<link href="{$temp_dir}/css/common.css" rel="stylesheet" type="text/css" />
+<link href="{$temp_dir}/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$temp_dir}/js/common.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/easy.js"></script>
+<script type="text/javascript" src="{$temp_dir}/js/main.js"></script>
+</head>
+
+<body>
+<div id="all">                                                      <!--webpage  start-->
+
+<!--site_nav  start-->
+
+{include file="site_nav.html"}
+
+<!--site_nav  END-->
+
+
+  <div  id="main">               <!--main  start-->
+
+        <div  id="main_head"> <!--main_head  start-->
+           <img src="{$temp_dir}/images/article_center.png" width="31" height="34"   class="control_logo"/>
+           <h1>文章日志</h1>
+           <div id="news">
+                   <img src="{$temp_dir}/images/news.gif" width="20" height="24" /><font>飞鸽消息：</font>
+                   <div  id="news_list">
+                      <script type="text/javascript" src="{$temp_dir}/js/news.js"></script>
+                   </div>
+           <div class="clear"></div>
+           </div>
+        </div>
+        <div  id="main_content">    <!--main_left start-->
+
+       <div  class="content_block   main_tool   resource_main_tool">
+               <div  class="content_block_title">文章列表</div>
+               <div  class="content_block_main">
+                        <span  class="tool_info"><img src="{$temp_dir}/images/user_article.gif" width="16" height="17" /><b>文章总数</b>{$article_num}篇
+                        </span>
+
+                        <span  class="tool_bar">
+                        <form action="" method="get">
+                         <input name="input" type="checkbox" value=""   onclick="select_all(this.checked);"/>全选
+
+                         <label>
+                         <input type="button" name="shield" id="add"   onclick="window.location.href='index.php?display=article_add&list_upid={$list_upid}'"    value="  添加文章"/>
+                         <input type="button" name="del" id="del"  value="  删除所选"/   onclick="CheckForm(this);Get_id('batch_do').value='batch_del';document.article_list_handle.submit();">
+                         <select name="jumpMenu2" id="top_jump" onchange="if(this.selectedIndex>0)Get_id('batch_do').value='batch_show';Get_id('batch_show').value=this.options[this.selectedIndex].value;document.article_list_handle.submit();">
+                                <option value="" selected="selected" >隐私设置</option>
+                                <option value="3">所有可见</option>
+                                <option value="2">好友可见</option>
+                                <option value="1">情侣可见</option>
+                                <option value="0">主人可见</option>
+                         </select>
+                         </label>
+
+                        </form>
+                        </span>
+
+                       <div  class="sep_border"></div>
+
+                        <span  class="tool_clsss"   id="class_list_bar">
+
+                        <a href="index.php?display=article&list_upid={$list_upid}"  style="{$class_all}">全部文章</a><h4>|</h4>
+
+                        {section  name=cclass_list  loop=$cclass_list}
+
+                        <a href="index.php?display=article&list_upid={$list_upid}&list_classid={$cclass_list[cclass_list].cclass_id}"    {$cclass_list[cclass_list].cclass_list_class}>{$cclass_list[cclass_list].cclass_name}</a><h4>|</h4>
+
+                        {/section}
+
+                        <a href="index.php?display=article&list_upid={$list_upid}&list_classid=-1"  style="{$class_draft}">草稿箱</a>
+
+                        </span>
+                        <div  class="sep_border"></div>
+
+             </div>
+           <div class="clear"></div>
+           </div>
+
+
+
+           <div  class="content_block   latest_act   resource_list   article_list"     id="list_check">
+
+               <div  class="content_block_main">
+                  <form action="index.php?display=article" method="get"  name="article_list_handle">
+                  <input name="display" type="hidden"  value="article" />
+                  <input name="location_url" type="hidden"  value="{$location_url}" />
+                  <input name="do" type="hidden"   id="batch_do" value="batch_del" />
+                  <input name="batch_show_type" type="hidden"   id="batch_show" value="0" />
+                  <ul>
+
+
+                      {section  name=article_list  loop=$article_list}
+
+                       <li>
+                       <input name="article_handle[]" type="checkbox"   class="visitor_list_check" value="{$article_list[article_list].aid}" />
+                       <span  class="act_emotion">
+                         <a href="index.php?display=article_view&view_id={$article_list[article_list].aid}"    class="popup"   rel="width:750px;height:400px"><b><img src="{$temp_dir}/images/user_article.gif" width="16" height="16" />{$article_list[article_list].title}</b></a>
+                         <a  href="index.php?{$article_now_url}&re_do=edit&do_id={$article_list[article_list].aid}&location_url={$location_url}" class="edit">编辑</a>
+                         <a  href="javascript:void(0)" onclick="CheckForm();location.href='index.php?{$send_url}&do=del&do_id={$article_list[article_list].aid}'"  class="del">删除</a>
+                         <select name="change_show" class="jumpMenu"  onchange="if(this.selectedIndex>=0)location.href=this.options[this.selectedIndex].value">
+                   
+					       <option value="index.php?display=article&do=chg_show&do_id={$article_list[article_list].aid}&show=3&location_url={$location_url}"  {$article_list[article_list].array_show_3}>所有可见</option>
+                           <option value="index.php?display=article&do=chg_show&do_id={$article_list[article_list].aid}&show=2&location_url={$location_url}"  {$article_list[article_list].array_show_2}>好友可见</option>
+                           <option value="index.php?display=article&do=chg_show&do_id={$article_list[article_list].aid}&show=1&location_url={$location_url}"  {$article_list[article_list].array_show_1}>情侣可见</option>
+                           <option value="index.php?display=article&do=chg_show&do_id={$article_list[article_list].aid}&show=0&location_url={$location_url}"  {$article_list[article_list].array_show_0}>主人可见</option>";
+
+                         </select>
+                       </span>
+
+                       <span  class="act_emotion    resource_intro">
+                       <font><i>个人分类：</i><a href="index.php?display=article&list_upid={$article_list[article_list].upid}&list_classid={$article_list[article_list].classid}"  class="article_class">{$article_list[article_list].result_classname}</a>{$article_list[article_list].publish_time}</font>
+                       <font  class="article_sketch">{$article_list[article_list].content}</font>
+                       <font  class="article_comment"><i>阅读（{$article_list[article_list].viewnum}）</i><a  href="http://easyframework.com"   class="popup"   rel="width:800px;height:300px" >评论<em  style="color:#fb522b;font-style:normal">（{$article_list[article_list].c_num}）</em></a></font>
+                       </span>
+
+                       <div  class="sep_border"></div>
+
+                       </li>
+
+                      {/section}
+
+
+
+                  </ul>
+               </form>
+               <div class="page"><div class="sabrosus">{$pagenav}</div></div>
+               <div class="clear"></div>
+               </div>
+
+
+
+
+           <div class="clear"></div>
+           </div>
+
+
+        </div> <!--main_left  end-->
+
+  </div>                          <!--main  end-->
+
+<!--site_foot start-->
+
+{include file="site_foot.html"}
+
+<!--site_foot  END-->

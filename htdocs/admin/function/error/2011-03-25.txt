@@ -1,0 +1,15 @@
+错误SQL语句：
+SELECT * FROM `".DB_PRE."class`  WHERE  user=
+客户IP:127.0.0.1
+时间 :2011-03-25 15:43:23
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."class`  WHERE  user=
+客户IP:127.0.0.1
+时间 :2011-03-25 15:43:33
+
+错误SQL语句：
+SELECT * FROM `".DB_PRE."class`  WHERE  user=
+客户IP:127.0.0.1
+时间 :2011-03-25 15:44:07
+
