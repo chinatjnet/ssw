@@ -18,13 +18,13 @@ ssw
 
 ### 前台截图（默认主题：blogbus）
 
-![github](https://raw.github.com/chinatjnet/ssw/master/introImg/1.png "intro1")
+![github](https://rawgithub.com/chinatjnet/ssw/master/introImg/1.png "intro1")
 
 
 ### 后台截图
 
-![github](https://raw.github.com/chinatjnet/ssw/master/introImg/2.png "intro2")
+![github](https://rawgithub.com/chinatjnet/ssw/master/introImg/2.png "intro2")
 
-![github](https://raw.github.com/chinatjnet/ssw/master/introImg/3.jpg "intro3")
+![github](https://rawgithub.com/chinatjnet/ssw/master/introImg/3.jpg "intro3")
 
-&nbsp;&nbsp;![github](https://raw.github.com/chinatjnet/ssw/master/introImg/4.jpg "intro4")
+&nbsp;&nbsp;![github](https://rawgithub.com/chinatjnet/ssw/master/introImg/4.jpg "intro4")
